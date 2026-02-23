@@ -251,6 +251,63 @@ function doCompare(){
 }
 })();
 </script>
+<!-- Pro Features Section -->
+<style>
+.pro-section{max-width:1400px;margin:40px auto 0;padding:0 20px 40px;position:relative}
+.pro-hd{text-align:center;margin-bottom:20px}
+.pro-hd h2{font-size:1.5rem;color:#7b2ff7;margin-bottom:4px}
+.pro-hd p{color:#888;font-size:.9rem}
+.pro-wrap{position:relative;cursor:pointer;border-radius:12px;overflow:hidden}
+.pro-blur{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:16px;filter:blur(6px);opacity:.6;pointer-events:none;user-select:none}
+.pro-card{background:#16213e;border:1px solid #333;border-radius:10px;padding:20px}
+.pro-card h3{font-size:1rem;color:#00d2ff;margin-bottom:8px}
+.pro-card p{color:#999;font-size:.85rem;line-height:1.5}
+.pro-card .mock-bar{height:8px;background:#2d2d5e;border-radius:4px;margin-top:10px}
+.pro-card .mock-bar span{display:block;height:100%;width:65%;background:linear-gradient(90deg,#7b2ff7,#00d2ff);border-radius:4px}
+.pro-lock{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(26,26,46,.4);z-index:2}
+.pro-lock-icon{font-size:3rem;margin-bottom:10px}
+.pro-lock-text{font-size:1.1rem;font-weight:600;color:#e0e0e0}
+.pro-lock-sub{font-size:.85rem;color:#888;margin-top:4px}
+.pro-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+.pro-modal-overlay.active{display:flex}
+.pro-modal{background:#16213e;border:1px solid #333;border-radius:16px;padding:36px;max-width:440px;width:90%;text-align:center;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.pro-modal h3{font-size:1.4rem;color:#fff;margin-bottom:6px}
+.pro-modal .pro-price{font-size:2rem;font-weight:700;background:linear-gradient(135deg,#7b2ff7,#00d2ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin:12px 0}
+.pro-modal ul{text-align:left;list-style:none;margin:18px 0;padding:0}
+.pro-modal ul li{padding:8px 0;color:#ccc;font-size:.95rem;border-bottom:1px solid #2a2a4a}
+.pro-modal ul li::before{content:"✅ ";margin-right:6px}
+.pro-modal ul li:last-child{border-bottom:none}
+.pro-btn-upgrade{display:inline-block;width:100%;padding:14px;background:linear-gradient(135deg,#7b2ff7,#00d2ff);color:#fff;font-size:1.05rem;font-weight:700;border:none;border-radius:10px;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s;margin-top:8px}
+.pro-btn-upgrade:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(123,47,247,.4)}
+.pro-btn-later{background:none;border:none;color:#888;font-size:.9rem;cursor:pointer;margin-top:14px;padding:8px;transition:color .2s}
+.pro-btn-later:hover{color:#ccc}
+@media(max-width:768px){.pro-blur{grid-template-columns:1fr}}
+</style>
+<div class="pro-section">
+<div class="pro-hd"><h2>🔒 Pro Features</h2><p>Unlock advanced JSON comparison tools</p></div>
+<div class="pro-wrap" onclick="document.getElementById('proModal').classList.add('active')">
+<div class="pro-blur">
+<div class="pro-card"><h3>📁 Folder Diff</h3><p>Compare entire folders of JSON files at once. Recursive directory scanning with summary report.</p><div class="mock-bar"><span></span></div></div>
+<div class="pro-card"><h3>🔀 Merge Tool</h3><p>Interactive 3-way merge with conflict resolution. Accept left, right, or edit manually.</p><div class="mock-bar"><span style="width:80%"></span></div></div>
+<div class="pro-card"><h3>📊 Export Report</h3><p>Export diff results as HTML, PDF, or Markdown. Share comparison reports with your team.</p><div class="mock-bar"><span style="width:45%"></span></div></div>
+</div>
+<div class="pro-lock"><div class="pro-lock-icon">🔒</div><div class="pro-lock-text">Pro Features Locked</div><div class="pro-lock-sub">Click to unlock</div></div>
+</div>
+</div>
+<div class="pro-modal-overlay" id="proModal" onclick="if(event.target===this)this.classList.remove('active')">
+<div class="pro-modal">
+<h3>Unlock Pro Features</h3>
+<div class="pro-price">$14</div>
+<ul>
+<li>Folder Diff — compare entire directories</li>
+<li>Merge Tool — interactive 3-way merge</li>
+<li>Export Report — HTML, PDF, Markdown</li>
+<li>Priority updates & support</li>
+</ul>
+<a class="pro-btn-upgrade" href="https://feifeicch.gumroad.com/l/ai-json-diff-pro" target="_blank">Upgrade to Pro — $14</a>
+<br><button class="pro-btn-later" onclick="document.getElementById('proModal').classList.remove('active')">Maybe later</button>
+</div>
+</div>
 <script src="https://alwingulla.com/88/tag.min.js" data-zone="130747" async data-cfasync="false"></script>
 </body>
 </html>
